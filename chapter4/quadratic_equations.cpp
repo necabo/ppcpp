@@ -5,7 +5,7 @@ int main() {
     double a, b, c;
     cin >> a >> b >> c;
     double root = sqrt(b * b - 4 * a * c);
-    double x1 = (-1 * b + root) / 2 * a;
-    double x2 = (-1 * b - root) / 2 * a;
+    double x1 = (-1 * b + root) / (2 * a);
+    double x2 = (-1 * b - root) / (2 * a);
     cout << "The results are " << x1 << " and " << x2 << '\n';
 }
