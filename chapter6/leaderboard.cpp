@@ -30,6 +30,7 @@ int main() {
             scores.push_back(Name_value{name, value});
         }
         print_scores(scores);
+        return 0;
 
     } catch (exception& e) {
         cerr << "Error: " << e.what() << '\n';
@@ -38,5 +39,4 @@ int main() {
         cerr << "Unknown exception!\n";
         return 2;
     }
-    return 0;
 }
