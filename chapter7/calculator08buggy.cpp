@@ -288,8 +288,8 @@ void clean_up_mess() {
 const string prompt = "> ";
 const string result = "= ";
 
-double calculate(char kind) {
-    switch (kind) {
+double calculate(Token t) {
+    switch (t.kind) {
         case let:
             return declaration();
         case square_root:
@@ -297,7 +297,7 @@ double calculate(char kind) {
         case power:
             return pow2();
         default:
-            ts.unget(kind);
+            ts.unget(t);
             return expression();
     }
 }
@@ -331,7 +331,7 @@ void handle_input() {
                      << "   - (re)assignment: <name> = <expression>" << endl;
                 break;
             default:
-                cout << result << calculate(t.kind) << endl;
+                cout << result << calculate(t) << endl;
                 break;
         }
     }
